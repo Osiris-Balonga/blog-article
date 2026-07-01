@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article de Blog - Apprendre le HTML sémantique</title>
+</head>
+<body>
+  <header>
+    <p>Carnet Web</p>
+    <h1>Apprendre le HTML sémantique avec une page de blog</h1>
+    <p>Un exemple simple pour organiser un article clair, accessible et facile à lire.</p>
+  </header>
+
+  <nav aria-label="Navigation principale">
+    <ul>
+      <li><a href="#article">Article</a></li>
+      <li><a href="#resources">Ressources</a></li>
+      <li><a href="#comments">Commentaires</a></li>
+      <li><a href="#comment-form">Participer</a></li>
+    </ul>
+  </nav>
+
+  <main id="article">
+    <article>
+      <header>
+        <p>Catégorie : Développement web</p>
+        <h2>Pourquoi la structure HTML compte autant que le style</h2>
+        <p>
+          Par <a href="#author">Ines Mbala</a> |
+          <time datetime="2026-06-30">30 juin 2026</time>
+        </p>
+      </header>
+
+      <figure>
+        <img src="images/working-laptop.jpg" alt="Ordinateur portable utilisé pour travailler sur du code">
+        <figcaption>Une bonne page commence par une structure lisible avant d'ajouter le style.</figcaption>
+      </figure>
+
+      <p>
+        Quand on débute en HTML, il est tentant de penser uniquement à l'apparence finale.
+        Pourtant, la structure du document est la base de l'expérience utilisateur. Elle aide
+        les navigateurs, les moteurs de recherche et les technologies d'assistance à comprendre
+        le rôle de chaque partie de la page.
+      </p>
+
+      <p>
+        Un article de blog est un bon exercice, car il combine plusieurs éléments courants :
+        un titre, des métadonnées, du texte, des images, des citations, un tableau, une barre
+        latérale et un formulaire. Chaque élément doit avoir une place logique.
+      </p>
+
+      <blockquote>
+        <p>Un bon HTML ne sert pas seulement à afficher du contenu. Il explique aussi le contenu.</p>
+      </blockquote>
+
+      <h3>Les balises qui donnent du sens</h3>
+      <p>
+        Les balises sémantiques comme <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>,
+        <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>
+        et <code>&lt;footer&gt;</code> permettent de découper la page en zones reconnaissables.
+        Cela rend le code plus facile à maintenir.
+      </p>
+
+      <figure>
+        <img src="images/responsive-design.jpg" alt="Personne utilisant un ordinateur portable pour consulter une interface web">
+        <figcaption>Une structure claire reste utile quand la page passe sur petit écran.</figcaption>
+      </figure>
+
+      <h3>Tableau de comparaison</h3>
+      <p>Le tableau ci-dessous résume quelques éléments HTML fréquents dans un article.</p>
+
+      <table>
+        <caption>Éléments HTML utiles dans un article de blog</caption>
+        <thead>
+          <tr>
+            <th scope="col">Élément</th>
+            <th scope="col">Rôle</th>
+            <th scope="col">Exemple d'usage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>&lt;article&gt;</code></td>
+            <td>Contenu autonome</td>
+            <td>Article principal de la page</td>
+          </tr>
+          <tr>
+            <td><code>&lt;figure&gt;</code></td>
+            <td>Média avec légende</td>
+            <td>Image et texte de contexte</td>
+          </tr>
+          <tr>
+            <td><code>&lt;blockquote&gt;</code></td>
+            <td>Citation longue</td>
+            <td>Idée importante mise en valeur</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <section id="comments" aria-labelledby="comments-title">
+      <h2 id="comments-title">Commentaires</h2>
+      <article>
+        <h3>Marc</h3>
+        <p>L'exemple du tableau aide à comprendre quand utiliser chaque balise.</p>
+      </article>
+      <article>
+        <h3>Awa</h3>
+        <p>La séparation entre contenu et présentation devient plus claire.</p>
+      </article>
+    </section>
+
+    <section id="comment-form" aria-labelledby="form-title">
+      <h2 id="form-title">Ajouter un commentaire</h2>
+      <form action="#" method="post">
+        <p>
+          <label for="name">Nom</label>
+          <input type="text" id="name" name="name" required>
+        </p>
+        <p>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </p>
+        <p>
+          <label for="message">Commentaire</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </p>
+        <button type="submit">Publier le commentaire</button>
+      </form>
+    </section>
+  </main>
+
+  <aside id="resources" aria-labelledby="sidebar-title">
+    <h2 id="sidebar-title">À propos de l'article</h2>
+    <p>Cet article fait partie d'une série d'exercices pour progresser en HTML.</p>
+    <section aria-labelledby="recent-title">
+      <h3 id="recent-title">Articles récents</h3>
+      <ul>
+        <li><a href="#">Bien nommer ses fichiers web</a></li>
+        <li><a href="#">Comprendre les formulaires HTML</a></li>
+        <li><a href="#">Préparer une page avant le CSS</a></li>
+      </ul>
+    </section>
+    <section id="author" aria-labelledby="author-title">
+      <h3 id="author-title">Auteur</h3>
+      <p>Ines Mbala partage des conseils courts pour apprendre les bases du web avec méthode.</p>
+    </section>
+  </aside>
+
+  <footer>
+    <p>© 2026 Carnet Web. Page d'exercice HTML.</p>
+  </footer>
+</body>
+</html>
